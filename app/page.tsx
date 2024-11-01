@@ -5,5 +5,4 @@ const Home = () => (
     <Chatbot />
   </div>
 );
-
 export default Home;

@@ -14,6 +14,7 @@ export default function Chatbot() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [loading, setLoading] = useState<boolean>(false);
 
+  
   const handleSend = () => {
     if (!input.trim()) return;
     const newMessage: Message = {
@@ -79,11 +80,13 @@ export default function Chatbot() {
                 return (
                   <div key={msg.id} className="chat chat-start">
                     <div className="chat-image avatar">
-                      <div className="w-10 rounded-full bg-lime-700 p-2">
-                        <Bot color="#fff"/>
+                      <div className="w-10 rounded-full border shadow-md p-2">
+                        <Bot color="#000000"/>
                       </div>
                     </div>
-                    <div className="chat-bubble break-words">{msg.text}</div>
+                    <div className="chat-bubble bg-gray-300 break-words">
+                      <p className="text-gray-900">{msg.text}</p>
+                      </div>
                   </div>
                 );
               } else {
@@ -94,7 +97,9 @@ export default function Chatbot() {
                         <User color="#fff"/>
                       </div>
                     </div>
-                    <div className="chat-bubble chat-bubble-success break-words">{msg.text}</div>
+                    <div className="chat-bubble bg-gray-300 break-words">
+                      <p className="text-gray-900">{msg.text}</p>
+                      </div>
                   </div>
                 );
               }
@@ -102,11 +107,11 @@ export default function Chatbot() {
             {loading && (
               <div className="chat chat-start">
                 <div className="chat-image avatar">
-                  <div className="w-10 rounded-full bg-lime-700 p-2">
-                    <Bot color="#fff"/>
-                  </div>
+                    <div className="w-10 rounded-full border shadow-md p-2">
+                        <Bot color="#000000"/>
+                    </div>
                 </div>
-                <div className="chat-bubble">
+                <div className="chat-bubble bg-gray-300 break-words">
                   <div className="flex items-center gap-1">
                     <div className='h-3 w-3 bg-white rounded-full animate-bounce [animation-delay:-0.3s]'></div>
                     <div className='h-3 w-3 bg-white rounded-full animate-bounce [animation-delay:-0.15s]'></div>
