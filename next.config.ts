@@ -8,6 +8,4 @@ const nextConfig: NextConfig = {
     CHATBOT_ID: process.env.CHATBOT_ID,
   },
 };
-
-
 export default nextConfig;
