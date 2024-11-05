@@ -62,7 +62,6 @@ const Chatbot: React.FC = () => {
       handleSend();
     }
   };
-
   const resetMessages = () => {
     setMessages([]);
   };

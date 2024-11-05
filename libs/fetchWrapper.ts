@@ -18,6 +18,7 @@ const get = async (endpoint: string, query?: QueryT) => {
   }
 };
 
+
 const post = async (endpoint: string, body: any) => {
   try {
     const res = await axios.post(`${baseUrl}${endpoint}`, body, {
